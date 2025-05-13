@@ -114,7 +114,7 @@ const gameController = (() => {
        /* setTimeout(() => {
             displayController.updateMessage(`${players[currentPlayerIndex].name}'s turn!`);
         }, 50); // Forces browser repaint*/
-    }
+    };
 
     const playTurn = (index) => {
         if (gameOver || gameBoard.getBoard()[index] !== "") return;
