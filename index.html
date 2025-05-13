@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div id="container">
+        <!-- Gameboard goes here -->
+        <div id="gameboard">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <div id="players">
+            <div class="playerGroup">
+                <label for="player1">Player 1 Name:</label>
+                <input type="text" id="player1" placeholder="Enter a name">
+            </div>
+            <div class="playerGroup">
+
+            <label for="player2">Player 2 Name:</label>
+            <input type="text" id="player2" placeholder="Enter a name">
+            </div>
+        </div>
+        <button class="setNamesBtn" onclick="gameController.setPlayerNames()">Set Names</button>
+    </div>
+    <p id="message">Game Starts! Player 1 goes first.</p>
+    <button id="restartBtn">Restart Game</button>
+</body>
+</html>
