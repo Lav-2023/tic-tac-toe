@@ -1,0 +1,178 @@
+body {
+    background-color: rgb(187, 214, 245);
+    color: #580c20;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 38rem;
+    height: 38rem;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #4CAF50, #2E7D32);
+    margin: auto;
+    border: 1px solid #338338;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), 
+                inset 0px -3px 3px rgba(0, 0, 0, 0.3); 
+}
+
+#gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+}
+
+#players {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1rem;
+    margin: 2rem auto;
+    text-align: center;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    width: 400px;
+    margin: auto; /* Centers the box */
+}
+
+.playerGroup {
+    display: flex;
+    flex-direction: column; /* Keeps label above input */
+    align-items: center;
+    padding: 1rem;
+}
+
+.playerGroup label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+#player1, #player2 {
+    width: 150px; /* Ensures consistent sizing */
+}
+
+.setNamesBtn {
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 0.8rem;;
+}
+
+.setNamesBtn:hover {
+    background-color: #6ae8db;
+}
+
+#message {
+    font-size: 1.5rem;
+    text-align: center;
+    display: block; 
+    font-weight: bold;
+    margin: 3rem;
+}
+
+#restartBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(to bottom, #9f1f1f, #d77c37); /* Gradient for depth */
+    border: 2px solid #9eb52a; /* Darker border for edge definition */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), 
+                inset 0px -3px 3px rgba(0, 0, 0, 0.3); /* 3D effect */
+    transition: all 0.2s ease-in-out;
+}
+
+#restartBtn:hover {
+    background-image: none;
+    background-color: rgb(183, 136, 55);
+}
+
+.button:active {
+    box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.5), 
+                inset 0px -2px 2px rgba(255, 255, 255, 0.5); /* Pressed effect */
+    transform: translateY(2px); /* Push down slightly */
+}
+
+@media (max-width: 480px) {
+    #container {
+        width: 90%;
+        height: auto;
+    }
+    #gameboard {
+        grid-template-columns: repeat(3, 60px);
+    }
+    .cell {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    #container {
+        width: 25rem;
+        height: 25rem;
+    }
+    #gameboard {
+        grid-template-columns: repeat(3, 80px);
+    }
+    .cell {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #container {
+        width: 30rem;
+        height: 30rem;
+    }
+    #gameboard {
+        grid-template-columns: repeat(3, 90px);
+    }
+    .cell {
+        width: 90px;
+        height: 90px;
+    }
+}
